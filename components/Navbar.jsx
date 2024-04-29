@@ -2,9 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
-import { SignedIn, UserButton, UserProfile, useUser } from "@clerk/nextjs";
+import { SignedIn, UserButton, UserProfile, SignedOut, useUser, SignInButton } from "@clerk/nextjs";
 
-const { user } = useUser;
 const Navbar = () => {
   return (
     <nav className="flex-between fixed z-50 w-full bg-[#371B05] px-6 py-4 lg:px-10">
