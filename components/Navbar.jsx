@@ -1,10 +1,12 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import { SignedIn, UserButton, UserProfile, SignedOut, useUser, SignInButton } from "@clerk/nextjs";
-
+import { useRouter } from "next/navigation";
 const Navbar = () => {
+  const router = useRouter();
   return (
     <nav className="flex-between fixed z-50 w-full bg-[#371B05] px-6 py-4 lg:px-10">
       <Link href={"/"} className="flex items-center gap-1">
@@ -21,7 +23,7 @@ const Navbar = () => {
       </Link>
       <div className="flex-between gap-5">
         <SignedIn>
-          <UserButton />
+          <UserButton/>
         </SignedIn>
 
         <MobileNav />

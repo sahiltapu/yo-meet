@@ -19,26 +19,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <ClerkProvider
-        appearance={{
-          layout: {
-            socialButtonsVariant: "iconButton",
-            logoImageUrl: "/images/yo-meet-logo.png",
-          },
-          variables: {
-            colorText: "#fff",
-            colorPrimary: "#0E78F9",
-            colorBackground: "#371B05",
-            colorInputBackground: "#F8F6E3",
-            colorInputText: "#371B05",
-          },
-        }}
-      >
-        <body className={`${inter.className} bg-[#9B3922]`}>
+      <body className={`${inter.className} bg-[#9B3922]`}>
+        <ClerkProvider
+          appearance={{
+            layout: {
+              socialButtonsVariant: "iconButton",
+              logoImageUrl: "/images/yo-meet-logo.png",
+            },
+            variables: {
+              colorText: "#fff",
+              colorPrimary: "#0E78F9",
+              colorBackground: "#371B05",
+              colorInputBackground: "#F8F6E3",
+              colorInputText: "#371B05",
+            },
+          }}
+        >
           {children}
           <Toaster />
-        </body>
-      </ClerkProvider>
+        </ClerkProvider>
+      </body>
     </html>
   );
 }
